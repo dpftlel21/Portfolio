@@ -2,16 +2,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "../Main/Card.css";
 import { EffectCards } from "swiper/modules";
+import profile from "../../assets/Images/profile2.jpg";
 
 const cardContainer =
-  "w-screen flex justify-center items-center text-2xl text-white";
+  "w-[120vh] h-[50vh] ml-[20%]  flex justify-center items-center rounded-xl shadow bg-gray-100";
 const swiperContainer = "w-[80vh] overflow-x-hidden"; // 필요한 경우 너비 조절
 
 const InfoCard = () => {
   return (
     <div className={cardContainer}>
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center">
         <div className={swiperContainer}>
           <Swiper
             effect={"cards"}
@@ -21,17 +23,26 @@ const InfoCard = () => {
             slidesPerView={4}
             className="mySwiper"
           >
-            <SwiperSlide>slide1</SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center text-center">
+                <img
+                  src={profile}
+                  className="w-[95%] h-[20vh] rounded-xl mt-1"
+                />
+                <h1 className="my-[5%]">안녕하세요! </h1>
+                <h3 className="text-sm">프론트엔드 개발자 이인우 입니다 !</h3>
+              </div>
+            </SwiperSlide>
             <SwiperSlide>slide2</SwiperSlide>
             <SwiperSlide>slide3</SwiperSlide>
             <SwiperSlide>slide4</SwiperSlide>
           </Swiper>
         </div>
       </div>
-      <div className="w-[50vh] flex flex-col text-xl">
+      <div className="flex flex-col mr-[12%] text-lg text-black">
         <h1>About</h1>
-        <h1 className="mt-12">제 자신에 대한 간단한 정보들을 담았습니다!</h1>
-        <h1 className="mt-12">카드를 드래그하여 옆으로 넘겨 보세요 !</h1>
+        <h1 className="my-12">제 자신에 대한 간단한 정보들을 담았습니다!</h1>
+        <h1>카드를 드래그하여 옆으로 넘겨 보세요 !</h1>
       </div>
     </div>
   );
