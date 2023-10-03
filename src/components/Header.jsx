@@ -16,6 +16,10 @@ const Header = () => {
         </div>
       </div>
 
+      <button>About me?</button>
+      <button>My Projects</button>
+      <button>My Stack</button>
+
       <div className="w-[15vh] flex justify-around mt-[10%] items-center text-black">
         <button className={buttonStyle}>
           <Icon
