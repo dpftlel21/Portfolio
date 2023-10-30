@@ -2,10 +2,11 @@ import { useState } from "react";
 import profile from "../assets/Images/profile2.jpg";
 import { Icon } from "@iconify/react";
 
-const Header = () => {
-  const HeaderStyle =
+const Navbar = () => {
+  const NavbarStyle =
     "w-[30vh] h-[50vh] mx-[5%] flex flex-col justify-center items-center fixed top-[25%] rounded-xl text-2xl bg-[#a0b3f3] shadow font-bold text-white";
-  const buttonStyle = "w-[3vh] h-[3vh]";
+  const buttonStyle =
+    "w-[3vh] h-[3vh] hover:translate-y-[3px] transition duration-300 ease-in-out hover:bg-[#c6d7f3]";
 
   const headerItems = [
     { label: "About Me", id: "intro" },
@@ -41,19 +42,23 @@ const Header = () => {
   };
 
   return (
-    <nav className={HeaderStyle}>
+    <nav className={NavbarStyle}>
       <div className="flex justify-center items-center text-base">
         <img src={profile} className="w-[8vh] h-[8vh] rounded-xl" />
         <div className="flex flex-col justify-center items-center ml-2 text-base">
+          <h1 className="my-2">이인우</h1>
           <h1>프론트엔드 개발자</h1>
-          <h1 className="mt-2">이인우</h1>
         </div>
       </div>
 
       {/* 스크롤 이벤트 구현 */}
-      <div className="w-full text-2xl font-bold flex flex-col justify-center items-center my-2">
+      <div className="w-full text-2xl font-bold flex flex-col justify-center items-center my-4">
         {headerItems.map((headerItem) => (
-          <button key={headerItem.id} onClick={() => toggleMenu(headerItem.id)}>
+          <button
+            key={headerItem.id}
+            onClick={() => toggleMenu(headerItem.id)}
+            className="hover:translate-y-[3px] transition duration-300 ease-in-out hover:border-b-2 hover:border-b-[#c6d7f3]"
+          >
             {headerItem.label}
           </button>
         ))}
@@ -82,4 +87,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

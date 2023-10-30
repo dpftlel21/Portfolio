@@ -3,8 +3,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow } from "swiper/modules";
 
-const Detail = () => {
-  const DetailContainer =
+const Project = () => {
+  const ProjectContainer =
     "w-full h-screen flex justify-center items-center bg-gradient-to-b from-[#b1c4e0] to-[#c6d7f3] font-semibold text-white";
 
   const cardContainer =
@@ -16,8 +16,27 @@ const Detail = () => {
   const GoButton =
     "w-[10vh] h-[3vh] mt-[2%] mx-[1%] rounded-xl bg-white text-black text-sm hover:translate-y-[3px] transition duration-300 ease-in-out hover:bg-[#c6d7f3]";
 
+  const handleGithubClick = () => {
+    // Github 링크로 이동
+    window.location.href = "https://github.com/dpftlel21/seb45_main_005";
+  };
+
+  const handleMainClick = () => {
+    // Velog 링크로 이동
+    window.location.href =
+      "http://musicforecast.s3-website.ap-northeast-2.amazonaws.com/";
+  };
+
+  const handleBeenzinooGithub = () => {
+    window.location.href = "https://github.com/dpftlel21/exercise-tracker-app";
+  };
+
+  const handleBeenzinooClick = () => {
+    window.location.href = "https://dpftlel21.github.io/exercise-tracker-app/";
+  };
+
   return (
-    <div className={DetailContainer}>
+    <div className={ProjectContainer}>
       <div className={cardContainer}>
         <h1 className="text-black text-2xl mb-4">Project</h1>
         <div className="w-[120vh] flex justify-center items-center ">
@@ -52,8 +71,12 @@ const Detail = () => {
                   플레이리스트를 공유하는 웹 사이트를 기획하고, 제작했습니다.
                 </p>
                 <div className="w-full flex justify-center">
-                  <button className={GoButton}>Github</button>
-                  <button className={GoButton}>배포 싸이트</button>
+                  <button className={GoButton} onClick={handleGithubClick}>
+                    Github
+                  </button>
+                  <button className={GoButton} onClick={handleMainClick}>
+                    배포 싸이트
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
@@ -74,8 +97,12 @@ const Detail = () => {
                   관리할 수 있도록 지원합니다.
                 </p>
                 <div className="w-full flex justify-center">
-                  <button className={GoButton}>Github</button>
-                  <button className={GoButton}>배포 싸이트</button>
+                  <button className={GoButton} onClick={handleBeenzinooGithub}>
+                    Github
+                  </button>
+                  <button className={GoButton} onClick={handleBeenzinooClick}>
+                    배포 싸이트
+                  </button>
                 </div>
               </div>
             </SwiperSlide>
@@ -86,4 +113,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default Project;

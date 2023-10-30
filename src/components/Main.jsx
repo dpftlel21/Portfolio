@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import Detail from "./Detail";
-import InfoCard from "./InfoCard";
-import Header from "../Header";
+import Project from "./Project";
+import MyInfo from "./Info/MyInfo";
+import Header from "./Header";
 import Stack from "./Stack";
 
 const Main = () => {
   const sections = [
-    { id: "intro", component: <InfoCard /> },
-    { id: "project", component: <Detail /> },
+    { id: "intro", component: <MyInfo /> },
+    { id: "project", component: <Project /> },
     { id: "stack", component: <Stack /> },
   ];
   // 현재 스크롤 중인지 여부를 나타내는 상태
