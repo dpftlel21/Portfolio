@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 import Project from "./Project";
 import MyInfo from "./Info/MyInfo";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Stack from "./Stack";
 
 const Main = () => {
@@ -75,7 +75,7 @@ const Main = () => {
 
   return (
     <>
-      <Header />
+      <Navbar />
       {sections.map((section) => (
         <div key={section.id} id={section.id}>
           {React.cloneElement(section.component, {

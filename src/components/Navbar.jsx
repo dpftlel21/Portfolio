@@ -6,7 +6,7 @@ const Navbar = () => {
   const NavbarStyle =
     "w-[30vh] h-[50vh] mx-[5%] flex flex-col justify-center items-center fixed top-[25%] rounded-xl text-2xl bg-[#a0b3f3] shadow font-bold text-white";
   const buttonStyle =
-    "w-[3vh] h-[3vh] hover:translate-y-[3px] transition duration-300 ease-in-out hover:bg-[#c6d7f3]";
+    "w-[3vh] h-[3vh] hover:translate-y-[6px] transition duration-300 ease-in-out";
 
   const headerItems = [
     { label: "About Me", id: "intro" },
@@ -67,7 +67,7 @@ const Navbar = () => {
       <div className="w-[15vh] flex justify-around mt-[10%] items-center text-black">
         <button className={buttonStyle}>
           <Icon
-            icon="teenyicons:pdf-solid"
+            icon="ri:notion-fill"
             color="white"
             className="w-[95%] h-[95%]"
           />
