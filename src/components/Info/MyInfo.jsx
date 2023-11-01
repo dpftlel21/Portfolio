@@ -11,7 +11,7 @@ import FourCard from "./FourCard";
 
 const cardContainer =
   "w-[120vh] h-[50vh] ml-[20%]  flex justify-center items-center rounded-xl shadow bg-gray-100";
-const swiperContainer = "w-[80vh] overflow-x-hidden"; // 필요한 경우 너비 조절
+const swiperContainer = "w-[80vh] overflow-x-hidden";
 
 const MyInfo = () => {
   return (
@@ -52,9 +52,9 @@ const MyInfo = () => {
               </Swiper>
             </div>
           </div>
-          <div className="flex flex-col mr-[10%] text-lg text-black">
-            <h1>About</h1>
-            <h1 className="my-12">저의 간단한 정보들을 담았습니다!</h1>
+          <div className="mr-[10%] text-lg text-black">
+            <h1>About me !!</h1>
+            <h1 className="my-12">저를 간단히 소개했습니다 !!</h1>
             <h1>카드를 드래그하여 옆으로 넘겨 보세요 !</h1>
           </div>
         </div>

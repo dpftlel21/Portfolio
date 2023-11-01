@@ -41,6 +41,12 @@ const Navbar = () => {
     window.location.href = "https://velog.io/@dpftlel21";
   };
 
+  const handleNotionClick = () => {
+    // Velog 링크로 이동
+    window.location.href =
+      "https://www.notion.so/Profile__-88da54a6b00b4a66a1f096f3a98b5ce1";
+  };
+
   return (
     <nav className={NavbarStyle}>
       <div className="flex justify-center items-center text-base">
@@ -65,7 +71,7 @@ const Navbar = () => {
       </div>
 
       <div className="w-[15vh] flex justify-around mt-[10%] items-center text-black">
-        <button className={buttonStyle}>
+        <button className={buttonStyle} onClick={handleNotionClick}>
           <Icon
             icon="ri:notion-fill"
             color="white"
